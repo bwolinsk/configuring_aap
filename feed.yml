@@ -1,6 +1,6 @@
 ---
 - name: Import objects to destination cluster
-  hosts: dest_cluster
+  hosts: dest
   become: false
   gather_facts: false
   vars:
@@ -31,6 +31,8 @@
       - {role: credentials, var: controller_credentials, tags: credentials}
       - {role: inventories, var: controller_inventories, tags: inventories}
       - {role: inventory_sources, var: controller_inventory_sources, tags: inventory_sources}
+      - {role: users, var: controller_user_accounts, tags: users}
+      - {role: roles, var: controller_roles, tags: roles}
       - {role: job_templates, var: controller_templates, tags: job_templates}
       - {role: workflow_job_templates, var: controller_workflows, tags: workflow_job_templates}
       - {role: schedules, var: controller_schedules, tags: schedules}

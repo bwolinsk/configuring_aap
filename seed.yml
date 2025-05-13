@@ -1,6 +1,6 @@
 ---
 - name: Export objects from source cluster
-  hosts: source_cluster
+  hosts: source
   become: false
   gather_facts: false
   vars:
@@ -11,6 +11,7 @@
       - projects
       - job_templates
       - schedules
+      - users
 
   pre_tasks:
     - name: Setup authentication
