@@ -8,10 +8,13 @@
       - inventory
       - credentials
       - organizations
+      - users
+      - teams
       - projects
       - job_templates
       - schedules
-      - users
+      - roles
+
 
   pre_tasks:
     - name: Setup authentication
